@@ -39,8 +39,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.btn_move_activity_object ->{
+                val person = Person(
+                    "Dicoding Academy",
+                    5,
+                    "academy@dicoding.com",
+                    "Bandung"
+                )
 
+                val moveWithObjectIntent = Intent(this@MainActivity, MoveWithObjectActivity::class.java)
+                moveWithObjectIntent.putExtra(MoveWithObjectActivity.EXTRA_PERSON,person)
+                startActivity(moveWithObjectIntent)
             }
+
             R.id.btn_dial_number ->{
                 val phoneNumber = "081210841382"
                 val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
