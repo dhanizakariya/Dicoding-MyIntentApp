@@ -20,7 +20,7 @@ class MoveWithDataActivity : AppCompatActivity() {
         val name = intent.getStringExtra(EXTRA_NAME)
         val age = intent.getIntExtra(EXTRA_AGE, 0)
 
-        val text = "Name : $name, \nYour Age: $age"
+        val text = "Name : $name, Your Age: $age"
         tvDataReceived.text = text
     }
 }
